@@ -16,11 +16,12 @@ build-backend = "hatchling.build"
 [dependency-groups]
 dev = [
     "pytest",
+    "pytest-django",
     "ruff",
 ]
 
-[tool.uv]
-package = false
+[tool.hatch.build.targets.wheel]
+packages = ["eventcore"]
 
 [tool.ruff]
 line-length = 100
